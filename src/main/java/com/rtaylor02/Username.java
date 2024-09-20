@@ -1,20 +1,29 @@
 package com.rtaylor02;
 
+
 /**
  * @author Rodney Taylor (u228616)
  */
 public class Username {
-    private String username;
+    private final int MIN_CHARACTERS = 4;
+    private String name;
     
-    public Username(String username) {
-        this.username = username;
+    public Username(String name) {
+        // Validation
+        if (name.length() < MIN_CHARACTERS) {
+            throw new InvalidNameException("Invalid characters length: < " + MIN_CHARACTERS);
+        } else {
+            this.name = name;
+        }
     }
     
     public Username() {
-        this.username = "unknown";
+        this.name = "unknown";
     }
     
     public String asLowerCase() {
-        return username.toLowerCase();
+        return name.toLowerCase();
     }
+    
+    
 }
