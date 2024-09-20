@@ -11,7 +11,7 @@ public class Username {
     }
     
     public Username() {
-    
+        this.username = "unknown";
     }
     
     public String asLowerCase() {
