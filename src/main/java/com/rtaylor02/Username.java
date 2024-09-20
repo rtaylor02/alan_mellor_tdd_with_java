@@ -7,6 +7,7 @@ public class Username {
     private String username;
     
     public Username(String username) {
+        this.username = username;
     }
     
     public Username() {
@@ -14,6 +15,6 @@ public class Username {
     }
     
     public String asLowerCase() {
-        return username;
+        return username.toLowerCase();
     }
 }
