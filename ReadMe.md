@@ -13,6 +13,7 @@ So that ...
 
 ## Good Points
 - We can have 100% code coverage and still have missing tests.
+- Creating an executable specification is an important benefit of TDD.
 
 # Reference
 Test-Driven Development with Java by Alan Mellor
