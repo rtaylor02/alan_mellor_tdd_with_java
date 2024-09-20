@@ -2,14 +2,13 @@ package com.rtaylor02;
 
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 /**
  * @author Rodney Taylor (u228616)
  */
-public class UsernameTest {
-    
-    private Username systemUnderTest;
+class UsernameTest {
     
     /*
      * GIVEN a player
@@ -17,12 +16,12 @@ public class UsernameTest {
      * THEN their username should be in lowercase
      */
     @Test
-    public void shouldBeInLowercase_whenUsernameIsProcessed() {
+    void testAsLowerCase_shouldBeInLowercase_whenUsernameIsProcessed() {
         // ARRANGE
-        var expected = new Username("SirJakington35179");
+        var userName = new Username("SirJakington35179");
         
         // ACT
-        var actual = systemUnderTest.asLowerCase();
+        var actual = userName.asLowerCase();
         
         // ASSERT
         assertThat(actual).isEqualTo("sirjakington35179");
