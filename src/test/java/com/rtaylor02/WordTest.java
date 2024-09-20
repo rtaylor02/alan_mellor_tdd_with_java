@@ -12,12 +12,12 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 class WordTest {
     /*
-     * GIVEN a game
-     * WHEN a single correct letter is entered
+     * GIVEN a single character word
+     * WHEN an incorrect guess to the word is presented
      * THEN score value of INCORRECT should be given
      */
     @Test
-    void shouldScoreINCORRECT_whenAnIncorrectLetterIsEntered() {
+    void shouldScoreINCORRECT_whenAnIncorrectWordIsEntered() {
         // ARRANGE
         Word word = new Word("A");
         
