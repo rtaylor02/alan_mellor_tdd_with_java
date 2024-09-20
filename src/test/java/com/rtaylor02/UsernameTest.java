@@ -2,16 +2,13 @@ package com.rtaylor02;
 
 import org.junit.jupiter.api.Test;
 
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
-
 
 /**
  * @author Rodney Taylor (u228616)
  */
-class UsernameTest {
-    
+class UsernameTest {    
     /*
      * GIVEN a player
      * WHEN their username is processed

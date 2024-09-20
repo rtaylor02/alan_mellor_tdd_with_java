@@ -1,6 +1,5 @@
 # Introduction
 
-
 ## User Story
 As a ...
 I want ...
