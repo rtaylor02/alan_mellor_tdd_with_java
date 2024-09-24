@@ -1,5 +1,6 @@
 package com.rtaylor02;
 
+import com.rtaylor02.wordz.Letter;
 import com.rtaylor02.wordz.Score;
 import com.rtaylor02.wordz.Word;
 import org.junit.jupiter.api.Test;
@@ -17,14 +18,34 @@ class WordTest {
      * THEN score value of INCORRECT should be given
      */
     @Test
-    void shouldScoreINCORRECT_whenAnIncorrectWordIsEntered() {
+    void oneIncorrectLetter() {
         // ARRANGE
-        Word word = new Word("A");
-        
+        var word = new Word("A");
+        var score = word.guess("Z");
+
         // ACT
-        Score actualScore = word.guess(new Word("Z"));
-        
-        // ASSERT
-        assertThat(actualScore).isEqualTo(Score.INCORRECT);
+        assertScoreForLetter(score, 0, Letter.INCORRECT);
+    }
+
+    /**
+     * GIVEN a single character word
+     * WHEN a correct guess to the word is presented
+     * THEN score value of CORRECT should be given
+     */
+    @Test
+    void oneCorrectLetter() {
+        // ARRANGE
+        var word = new Word("A");
+        var score = word.guess("A");
+
+        // ACT - ASSERT
+        assertScoreForLetter(score, 0, Letter.CORRECT);
+    }
+
+    private static void assertScoreForLetter(Score score, int position, Letter correct) {
+        var result = score.letter(position);
+
+        // ACT - ASSERT
+        assertThat(result).isEqualTo(correct);
     }
 }

@@ -7,16 +7,16 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * @author Rodney Taylor (u228616)
  */
 public class Word {
-    private final String correctWord;
+    private final String word;
     
-    public Word(String a) {
-        // Safely copy value of a
-        String temp = new String(a);
-        correctWord = temp;
+    public Word(String correctWord) {
+        this.word = correctWord;
     }
     
-    public Score guess(Word guessedWord) {
-        return Score.INCORRECT;
+    public Score guess(String attempt) {
+        var score = new Score(word);
+        score.assess(0, attempt);
+        return score;
     }
     
     @Override
