@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @author Rodney Taylor (u228616)
  */
 class WordTest {
-    /*
+    /**
      * GIVEN a single character word
      * WHEN an incorrect guess to the word is presented
      * THEN score value of INCORRECT should be given
@@ -24,7 +24,7 @@ class WordTest {
         var score = word.guess("Z");
 
         // ACT
-        assertScoreForLetter(score, 0, Letter.INCORRECT);
+        assertScoreForGuess(score, Letter.INCORRECT);
     }
 
     /**
@@ -39,13 +39,42 @@ class WordTest {
         var score = word.guess("A");
 
         // ACT - ASSERT
-        assertScoreForLetter(score, 0, Letter.CORRECT);
+        assertScoreForGuess(score, Letter.CORRECT);
     }
 
-    private static void assertScoreForLetter(Score score, int position, Letter correct) {
-        var result = score.letter(position);
+    /**
+     * GIVEN a two character word
+     * WHEN a guess word contains 1 incorrect letter and 1 positionally incorrect letter
+     * THEN score value of INCORRECT, PART_CORRECT should be given
+     */
+    @Test
+    void secondLetterIncorrectPosition() {
+        // ARRANGE
+        var word = new Word("AR");
+        var score = word.guess("ZA");
 
         // ACT - ASSERT
-        assertThat(result).isEqualTo(correct);
+        assertScoreForGuess(score, Letter.INCORRECT, Letter.PART_CORRECT);
+    }
+
+    /**
+     * GIVEN a 3 character word
+     * WHEN a guess word contains all possible scenarios: INCORRECT, CORRECT, and PART_CORRECT
+     * THEN score value should reflect accordingly
+     */
+    @Test
+    void allScoreCombinations() {
+        // ARRANGE
+        var word = new Word("ARI");
+        var score = word.guess("ZAI");
+
+        // ACT - ASSERT
+        assertScoreForGuess(score, Letter.INCORRECT, Letter.PART_CORRECT, Letter.CORRECT);
+    }
+
+    private void assertScoreForGuess(Score score, Letter... expectedScores) {
+        for (int position = 0; position < expectedScores.length; position++) {
+            assertThat(score.letter(position)).isEqualTo(expectedScores[position]);
+        }
     }
 }
