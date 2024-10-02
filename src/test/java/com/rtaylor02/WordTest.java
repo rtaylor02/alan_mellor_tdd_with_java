@@ -1,9 +1,6 @@
 package com.rtaylor02;
 
-<<<<<<< HEAD
-=======
 import com.rtaylor02.wordz.Letter;
->>>>>>> 9b5dcab445d328fa8aabd06c1110e6a4a35e706c
 import com.rtaylor02.wordz.Score;
 import com.rtaylor02.wordz.Word;
 import org.junit.jupiter.api.Test;
@@ -15,27 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @author Rodney Taylor (u228616)
  */
 class WordTest {
-<<<<<<< HEAD
-    /*
-=======
-    /**
->>>>>>> 9b5dcab445d328fa8aabd06c1110e6a4a35e706c
-     * GIVEN a single character word
-     * WHEN an incorrect guess to the word is presented
-     * THEN score value of INCORRECT should be given
-     */
     @Test
-<<<<<<< HEAD
-    void shouldScoreINCORRECT_whenAnIncorrectWordIsEntered() {
-        // ARRANGE
-        Word word = new Word("A");
-        
-        // ACT
-        Score actualScore = word.guess(new Word("Z"));
-        
-        // ASSERT
-        assertThat(actualScore).isEqualTo(Score.INCORRECT);
-=======
     void oneIncorrectLetter() {
         // ARRANGE
         var word = new Word("A");
@@ -94,6 +71,5 @@ class WordTest {
         for (int position = 0; position < expectedScores.length; position++) {
             assertThat(score.letter(position)).isEqualTo(expectedScores[position]);
         }
->>>>>>> 9b5dcab445d328fa8aabd06c1110e6a4a35e706c
     }
 }
