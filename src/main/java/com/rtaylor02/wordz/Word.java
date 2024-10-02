@@ -7,6 +7,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * @author Rodney Taylor (u228616)
  */
 public class Word {
+<<<<<<< HEAD
     private final String correctWord;
     
     public Word(String a) {
@@ -17,6 +18,18 @@ public class Word {
     
     public Score guess(Word guessedWord) {
         return Score.INCORRECT;
+=======
+    private final String word;
+    
+    public Word(String correctWord) {
+        this.word = correctWord;
+    }
+    
+    public Score guess(String attempt) {
+        var score = new Score(word);
+        score.assess(attempt);
+        return score;
+>>>>>>> 9b5dcab445d328fa8aabd06c1110e6a4a35e706c
     }
     
     @Override
