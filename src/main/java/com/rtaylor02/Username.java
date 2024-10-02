@@ -1,5 +1,9 @@
 package com.rtaylor02;
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 9b5dcab445d328fa8aabd06c1110e6a4a35e706c
 /**
  * @author Rodney Taylor (u228616)
  */
@@ -23,4 +27,9 @@ public class Username {
     public String asLowerCase() {
         return name.toLowerCase();
     }
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> 9b5dcab445d328fa8aabd06c1110e6a4a35e706c
 }

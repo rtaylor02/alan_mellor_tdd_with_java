@@ -1,5 +1,9 @@
 # Introduction
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 9b5dcab445d328fa8aabd06c1110e6a4a35e706c
 ## User Story
 As a ...
 I want ...
@@ -15,6 +19,8 @@ So that ...
 - Creating an executable specification is an important benefit of TDD.
 - Triangulation ==> when we rely on adding tests to drive out the missing implementation details.
 - We must be able to skim-read a test and quickly see why it exists and what it does.
+<<<<<<< HEAD
+=======
 - Badly written code is hard to read. Sadly, it is easy to write.
 - Dependency inversion, dependency injection, Inversion of Control (IoC) ==> runtime technique where we supply an implementation of an abstraction to code that depends on it.
 - Stub = a test double (for an external system) that provides an input value to create predictability in our test.
@@ -32,6 +38,7 @@ ISP = Interface Segregation Principle - effective interfaces
 - LSP: A code block can be safely swapped for another if it can handle the full range of inputs and provide (at least) all expected outputs, with no undesired side effects.
 - OCP: Code should be **open to extension** but **closed to modification**.
 - ISP: Keep interfaces small and strongly related to a single idea.
+>>>>>>> 9b5dcab445d328fa8aabd06c1110e6a4a35e706c
 
 # Reference
 Test-Driven Development with Java by Alan Mellor

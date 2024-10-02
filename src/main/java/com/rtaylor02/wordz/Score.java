@@ -1,5 +1,12 @@
 package com.rtaylor02.wordz;
 
+<<<<<<< HEAD
+/**
+ * @author Rodney Taylor (u228616)
+ */
+public enum Score {
+    CORRECT, INCORRECT, MISPLACED;
+=======
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,4 +50,5 @@ public class Score {
     private boolean isCorrectLetter(char currentLetter) {
         return correct.charAt(position) == currentLetter;
     }
+>>>>>>> 9b5dcab445d328fa8aabd06c1110e6a4a35e706c
 }
