@@ -66,10 +66,10 @@ public class NewGameTest {
     @Test
     public void selectsRandomWord() {
         // ARRANGE
-        String expected = value;
+//        String expected = value;
         
         // ACT
-        String actual = systemUnderTest.method1(args);
+//        String actual = systemUnderTest.method1(args);
         
         // ASSERT
         Game game = getGameInRepository();
