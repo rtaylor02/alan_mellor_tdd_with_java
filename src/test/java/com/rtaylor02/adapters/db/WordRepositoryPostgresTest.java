@@ -27,18 +27,19 @@ public class WordRepositoryPostgresTest {
          */
         var ds = new PGSimpleDataSource();
         ds.setServerNames(new String[]{"localhost"});
-//        ds.setDatabaseName("wordzdb");
-        ds.setDatabaseName("postgres");
+        ds.setDatabaseName("wordzdb");
+        //ds.setDatabaseName("postgres");
         ds.setCurrentSchema("public");
-//        ds.setUser("ciuser");
-        ds.setUser("postgres");
-//        ds.setPassword("cipassword");
-        ds.setPassword("root");
+        ds.setUser("ciuser");
+        //ds.setUser("postgres");
+        ds.setPassword("cipassword");
+        //ds.setPassword("root");
         this.dataSource = ds;
     }
 
     /**
      * We want to test that a word can be fetched.
+     * '@Dataset' is used by DBRider to populate the db with the json content on test startup.
      */
     @Test
     @DataSet("adapters/data/wordTable.json")
