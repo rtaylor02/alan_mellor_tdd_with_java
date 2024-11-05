@@ -1,3 +1,6 @@
+# Reference
+[Test-Driven Development with Java](https://learning.oreilly.com/library/view/test-driven-development-with/9781803236230/) by Alan Mellor
+
 # Introduction
 
 ## User Story
@@ -33,5 +36,15 @@ ISP = Interface Segregation Principle - effective interfaces
 - OCP: Code should be **open to extension** but **closed to modification**.
 - ISP: Keep interfaces small and strongly related to a single idea.
 
-# Reference
-Test-Driven Development with Java by Alan Mellor
+### FIRST - Guides for Good Tests
+#### F - Fast
+Rule of thumb: < 2s
+#### I - Isolated
+No test is dependent on any other test(s). 
+#### R - Repeatable
+Tests must produce same result each time.
+#### S - Self-verified
+No programmer involvement in checking the result.
+#### T - Thorough and Timely
+Tests must include edge cases and done **BEFORE** writing any code for any feature/fix.
+
