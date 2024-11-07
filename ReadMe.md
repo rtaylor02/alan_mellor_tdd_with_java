@@ -8,10 +8,17 @@ As a ...
 I want ...
 So that ...
 
-In this sample project:
-As a ...
-I want ...
-So that ...
+In this sample project:  
+![img_1.png](img_1.png)
+
+### Workflow of an Agile TDD Project
+1) Pick the most impactful user story
+2) Think a bit about the design to aim for
+3) Use TDD to write the application logic in the core
+4) Use TDD to write code to connect the core to DB
+5) Use TDD to write code to connect the core to API endpoint
+
+TDD: grow the application code **outwards**.
 
 ## Good Points
 - We can have 100% code coverage and still have missing tests.
@@ -48,3 +55,16 @@ No programmer involvement in checking the result.
 #### T - Thorough and Timely
 Tests must include edge cases and done **BEFORE** writing any code for any feature/fix.
 
+# Wordz
+- Word to guess: 5 letter
+- A player has 6 attempts to guess the word
+- At each guess:
+  - Correct letter - correct position ==> black background
+  - Correct letter - incorrect position ==> gray background
+  - Incorrect letter ==> white background  
+  ![img.png](img.png)
+- Points:
+  - 6: guessed at 1st attempt, 
+  - 5: guessed at 2nd attempt, and so on
+  - 1: guessed at final attempt (6th)
+- 
