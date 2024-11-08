@@ -9,7 +9,7 @@ I want ...
 So that ...
 
 In this sample project:  
-![img_1.png](img_1.png)
+![user_story](./assets/user_story.png)
 
 ### Workflow of an Agile TDD Project
 1) Pick the most impactful user story
@@ -62,7 +62,7 @@ Tests must include edge cases and done **BEFORE** writing any code for any featu
   - Correct letter - correct position ==> black background
   - Correct letter - incorrect position ==> gray background
   - Incorrect letter ==> white background  
-  ![img.png](img.png)
+  ![wordz_ui](./assets/wordz_ui.png)
 - Points:
   - 6: guessed at 1st attempt, 
   - 5: guessed at 2nd attempt, and so on
