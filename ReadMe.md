@@ -2,6 +2,9 @@
 [Test-Driven Development with Java](https://learning.oreilly.com/library/view/test-driven-development-with/9781803236230/) by Alan Mellor
 
 # Introduction
+When implementing TDD, you will most likely,g implicitly, apply YAGNI and KISS principles along the way.  
+YAGNI = You Ain't Gonna Need It
+KISS = Keep It Simple, Stupid
 
 ## User Story
 As a ...
@@ -54,6 +57,35 @@ Tests must produce same result each time.
 No programmer involvement in checking the result.
 #### T - Thorough and Timely
 Tests must include edge cases and done **BEFORE** writing any code for any feature/fix.
+
+# Libraries
+- org.apache.commons:commons-lang3:3.17.0 ==> provides helper class to help with equals() and hashCode() for value objects.  
+  ```
+  @Override
+  public boolean equals(Object other) {
+      return EqualsBuilder.reflectionEquals(this, other);
+  }
+  @Override
+  public int hashCode() {
+      return HashCodeBuilder.reflectionHashCode(this);
+  }
+  ```
+# Happy Path, Negative Path, Boundary Conditions, and Code Coverage
+Happy Path ==> confirmation of what should happen when all are in order
+Negative Path ==> when one particular thing is not correct. This includes boundary conditions.
+
+## Boundary Conditions to be Tested
+Make sure that our tests cover boundary conditions:
+- missing values: "", 0, 0.0, null
+- unreasonable values: outside range
+- bogus or inconsistent input values
+- transitions between different states or branches of the logic
+- invalid argument passed: invalid request, object, etc
+- (extreme) input & output values: minimum, maximum, exact values of input and output range
+- badly formatted data
+- numeric overflow  
+> 100% code coverage should include all possible boundary condition tests. NOTE: 100% code coverage != complete test.  
+> Your QA engineer should be able to help you identify boundary conditions.
 
 # Wordz
 - Word to guess: 5 letter
